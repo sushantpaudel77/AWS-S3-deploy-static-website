@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CloudOps Hub - Modern Cloud & DevOps Solutions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">CloudOps Hub</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#tools">Tools</a></li>
+                <li><a href="#demo">Demo</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>Modern Cloud & DevOps Solutions</h1>
+            <p>Streamline your infrastructure with cutting-edge cloud technologies and DevOps practices</p>
+            <button class="cta-button" onclick="scrollToSection('services')">Explore Services</button>
+        </div>
+    </section>
+
+    <main class="main-content">
+        <div class="container">
+            <section class="section" id="services">
+                <h2>Our Services</h2>
+                <div class="services-grid">
+                    <div class="service-card" onclick="showServiceDetails('cloud')">
+                        <div class="service-icon">☁️</div>
+                        <h3>Cloud Migration</h3>
+                        <p>Seamlessly migrate your applications to AWS, Azure, or Google Cloud Platform with zero downtime and optimized performance.</p>
+                    </div>
+                    <div class="service-card" onclick="showServiceDetails('devops')">
+                        <div class="service-icon">⚙️</div>
+                        <h3>DevOps Automation</h3>
+                        <p>Implement CI/CD pipelines, infrastructure as code, and automated testing to accelerate your development lifecycle.</p>
+                    </div>
+                    <div class="service-card" onclick="showServiceDetails('monitoring')">
+                        <div class="service-icon">📊</div>
+                        <h3>Monitoring & Observability</h3>
+                        <p>Comprehensive monitoring solutions with real-time alerts, dashboards, and performance optimization.</p>
+                    </div>
+                    <div class="service-card" onclick="showServiceDetails('security')">
+                        <div class="service-icon">🔒</div>
+                        <h3>Security & Compliance</h3>
+                        <p>Implement security best practices, compliance frameworks, and automated security scanning.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section" id="tools">
+                <h2>Technologies & Tools</h2>
+                <div class="tools-container">
+                    <div class="tool-item">
+                        <h4>AWS</h4>
+                        <p>EC2, S3, Lambda, RDS</p>
+                    </div>
+                    <div class="tool-item">
+                        <h4>Docker</h4>
+                        <p>Containerization</p>
+                    </div>
+                    <div class="tool-item">
+                        <h4>Kubernetes</h4>
+                        <p>Container Orchestration</p>
+                    </div>
+                    <div class="tool-item">
+                        <h4>Terraform</h4>
+                        <p>Infrastructure as Code</p>
+                    </div>
+                    <div class="tool-item">
+                        <h4>Jenkins</h4>
+                        <p>CI/CD Pipeline</p>
+                    </div>
+                    <div class="tool-item">
+                        <h4>Prometheus</h4>
+                        <p>Monitoring & Alerting</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="stats">
+                <div class="container">
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <h3 id="projectCount">0</h3>
+                            <p>Projects Completed</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3 id="uptimeCount">0</h3>
+                            <p>% Uptime Achieved</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3 id="clientCount">0</h3>
+                            <p>Happy Clients</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3 id="deploymentCount">0</h3>
+                            <p>Daily Deployments</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section" id="demo">
+                <h2>Interactive Demo</h2>
+                <div class="interactive-demo">
+                    <h3>DevOps Command Simulator</h3>
+                    <div class="demo-controls">
+                        <button class="demo-btn" onclick="runCommand('deploy')">Deploy Application</button>
+                        <button class="demo-btn" onclick="runCommand('scale')">Scale Service</button>
+                        <button class="demo-btn" onclick="runCommand('monitor')">Check Health</button>
+                        <button class="demo-btn" onclick="runCommand('rollback')">Rollback</button>
+                        <button class="demo-btn" onclick="clearOutput()">Clear</button>
+                    </div>
+                    <div class="demo-output" id="demoOutput">
+                        Welcome to CloudOps Hub Demo Terminal
+                        Type commands above to simulate DevOps operations...
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 CloudOps Hub. Built for S3 Static Website Hosting Demo.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
