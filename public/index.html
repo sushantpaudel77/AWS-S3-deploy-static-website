@@ -8,41 +8,83 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <nav class="container">
-            <div class="logo">
-                <i class="fas fa-cloud"></i>
-                <span>CloudOps Hub</span>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#tools">Technologies</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#demo">Demo</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="mobile-menu-btn">
-                <i class="fas fa-bars"></i>
-            </div>
-        </nav>
-    </header>
-
-    <section class="hero" id="home">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Modern Cloud & DevOps Solutions</h1>
-                <p>Streamline your infrastructure with cutting-edge cloud technologies and DevOps practices to achieve unprecedented efficiency and scalability.</p>
-                <div class="hero-buttons">
-                    <button class="cta-button primary" onclick="scrollToSection('services')">Explore Services</button>
-                    <button class="cta-button secondary" onclick="scrollToSection('contact')">Get in Touch</button>
-                </div>
-            </div>
-            <div class="hero-image">
-                <img src="https://via.placeholder.com/600x400/1f2937/10b981?text=Cloud+Infrastructure" alt="Cloud Infrastructure">
+<header>
+    <nav class="container">
+        <div class="logo">
+            <i class="fas fa-cloud"></i>
+            <span>CloudOps Hub</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home" class="nav-link active">Home</a></li>
+            <li><a href="#services" class="nav-link">Services</a></li>
+            <li><a href="#tools" class="nav-link">Technologies</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#demo" class="nav-link">Demo</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+            <li class="nav-cta"><a href="#contact" class="cta-button primary small">Get Started</a></li>
+        </ul>
+        <div class="mobile-menu-btn">
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </div>
-    </section>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+    <div class="container">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span>Trusted by Fortune 500 companies</span>
+                <i class="fas fa-arrow-right"></i>
+            </div>
+            <h1>Accelerate Your Cloud Transformation</h1>
+            <p class="hero-subtitle">We deliver cutting-edge DevOps solutions that reduce deployment times by 80% while improving reliability and security.</p>
+            <div class="hero-buttons">
+                <button class="cta-button primary" onclick="scrollToSection('services')">
+                    <i class="fas fa-rocket"></i> Explore Services
+                </button>
+                <button class="cta-button secondary" onclick="scrollToSection('demo')">
+                    <i class="fas fa-play-circle"></i> Watch Demo
+                </button>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <h3>10x</h3>
+                    <p>Faster Deployments</p>
+                </div>
+                <div class="stat-item">
+                    <h3>99.99%</h3>
+                    <p>Uptime Guarantee</p>
+                </div>
+                <div class="stat-item">
+                    <h3>24/7</h3>
+                    <p>Expert Support</p>
+                </div>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="https://via.placeholder.com/600x400/1f2937/10b981?text=Cloud+Infrastructure" alt="Cloud Infrastructure" class="hero-main-img">
+            <div class="hero-image-badge">
+                <i class="fas fa-shield-alt"></i>
+                <span>Enterprise-grade Security</span>
+            </div>
+            <div class="hero-image-card">
+                <i class="fas fa-check-circle"></i>
+                <div>
+                    <h4>Cloud Migration Success</h4>
+                    <p>100+ successful migrations</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hero-scroll-indicator">
+        <span>Scroll to explore</span>
+        <i class="fas fa-chevron-down"></i>
+    </div>
+</section>
 
     <main class="main-content">
         <div class="container">
