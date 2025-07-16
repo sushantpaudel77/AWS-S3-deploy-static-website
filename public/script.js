@@ -66,11 +66,142 @@ function setupSmoothScrolling() {
     });
 }
 
+// Scroll to section helper function
+function scrollToSection(sectionId) {
+    document.getElementById(sectionId).scrollIntoView({
+        behavior: 'smooth'
+    });
+}
+
+// Interactive Demo Functions
+function setupInteractiveDemo() {
+    // Tab switching functionality
+    const tabs = document.querySelectorAll('.demo-tab');
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            tabs.forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+            updateDemoView(tab.textContent.trim());
+        });
+    });
+}
+
+function updateDemoView(tabName) {
+    const output = document.querySelector('.output-content');
+    let content = '';
+
+    switch(tabName) {
+        case 'Terminal':
+            content = `user@cloudops:~$ Connected to CloudOps Hub Demo Environment\n\n`;
+            content += `Type commands above to simulate DevOps operations...\n`;
+            content += `Available commands: deploy, scale, monitor, rollback\n`;
+            break;
+        case 'Pipeline':
+            content = `Pipeline Visualization:\n\n`;
+            content += `[Build] → [Test] → [Deploy] → [Monitor]\n`;
+            content += `Status: Ready\n`;
+            content += `Last Run: ${new Date().toLocaleString()}\n`;
+            content += `Next Run: ${new Date(Date.now() + 3600000).toLocaleTimeString()}\n`;
+            break;
+        case 'Monitoring':
+            content = `System Monitoring Dashboard:\n\n`;
+            content += `CPU Usage: ${Math.floor(Math.random() * 30) + 50}%\n`;
+            content += `Memory Usage: ${Math.floor(Math.random() * 20) + 60}%\n`;
+            content += `Network: ${Math.floor(Math.random() * 5) + 2} Mbps\n`;
+            content += `Uptime: ${Math.floor(Math.random() * 20) + 90} days\n`;
+            content += `Alerts: 0 active\n`;
+            break;
+    }
+
+    output.textContent = content;
+}
+
+function runCommand(command) {
+    const output = document.querySelector('.output-content');
+    let response = '';
+    const timestamp = new Date().toLocaleTimeString();
+
+    switch(command) {
+        case 'deploy':
+            response = `[${timestamp}] Starting deployment...\n`;
+            response += `[${timestamp}] Building container images\n`;
+            response += `[${timestamp}] Pushing images to registry\n`;
+            response += `[${timestamp}] Updating Kubernetes deployments\n`;
+            response += `[${timestamp}] Deployment successful! ✅\n`;
+            response += `[${timestamp}] New version v1.2.3 is now live\n`;
+            break;
+        case 'scale':
+            const replicas = Math.floor(Math.random() * 5) + 2;
+            response = `[${timestamp}] Scaling application...\n`;
+            response += `[${timestamp}] Current replicas: 2\n`;
+            response += `[${timestamp}] Scaling to ${replicas} replicas\n`;
+            response += `[${timestamp}] Scaling deployment frontend\n`;
+            response += `[${timestamp}] Scaling deployment backend\n`;
+            response += `[${timestamp}] Scaling complete (${replicas} replicas) ⚖️\n`;
+            break;
+        case 'monitor':
+            response = `[${timestamp}] Running health checks...\n`;
+            response += `[${timestamp}] Checking cluster nodes: 3/3 healthy\n`;
+            response += `[${timestamp}] Checking pods: 12/12 running\n`;
+            response += `[${timestamp}] Checking services: all endpoints available\n`;
+            response += `[${timestamp}] System health: EXCELLENT 🟢\n`;
+            break;
+        case 'rollback':
+            response = `[${timestamp}] Initiating rollback...\n`;
+            response += `[${timestamp}] Reverting to version v1.2.2\n`;
+            response += `[${timestamp}] Scaling down current deployment\n`;
+            response += `[${timestamp}] Deploying previous version\n`;
+            response += `[${timestamp}] Rollback complete! 🔄\n`;
+            break;
+    }
+
+    output.textContent += `\nuser@cloudops:~$ ${command}\n${response}`;
+    output.scrollTop = output.scrollHeight;
+}
+
+function clearOutput() {
+    const output = document.querySelector('.output-content');
+    output.textContent = 'Welcome to CloudOps Hub Demo Terminal\nType commands above to simulate DevOps operations...';
+}
+
+// Stats counter animation
+function animateStats() {
+    const counters = [
+        { element: 'projectCount', target: 247, duration: 2000 },
+        { element: 'uptimeCount', target: 99.9, duration: 2500, isDecimal: true },
+        { element: 'clientCount', target: 128, duration: 3000 },
+        { element: 'deploymentCount', target: 42, duration: 1500 }
+    ];
+
+    counters.forEach(counter => {
+        const element = document.getElementById(counter.element);
+        const start = 0;
+        const increment = counter.target / (counter.duration / 16);
+        let current = start;
+
+        const timer = setInterval(() => {
+            current += increment;
+            if (current >= counter.target) {
+                clearInterval(timer);
+                current = counter.target;
+            }
+
+            if (counter.isDecimal) {
+                element.textContent = current.toFixed(1);
+            } else {
+                element.textContent = Math.floor(current);
+            }
+        }, 16);
+    });
+}
+
 // Initialize when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     setupMobileMenu();
     setupHeaderScroll();
     setupSmoothScrolling();
+    setupInteractiveDemo();
+    animateStats();
 
     // Animate hero elements on load
     const heroElements = document.querySelectorAll('.hero-badge, .hero h1, .hero-subtitle, .hero-buttons, .hero-stats');
