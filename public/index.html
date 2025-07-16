@@ -1,418 +1,496 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CloudOps Hub - Modern Cloud & DevOps Solutions</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-<header>
-    <nav class="container">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="container">
         <div class="logo">
-            <i class="fas fa-cloud"></i>
-            <span>CloudOps Hub</span>
+          <i class="fas fa-cloud"></i>
+          <span>CloudOps Hub</span>
         </div>
         <ul class="nav-links">
-            <li><a href="#home" class="nav-link">Home</a></li>
-            <li><a href="#services" class="nav-link">Services</a></li>
-            <li><a href="#tools" class="nav-link">Technologies</a></li>
-            <li><a href="#about" class="nav-link">About</a></li>
-            <li><a href="#demo" class="nav-link">Demo</a></li>
-            <li><a href="#contact" class="nav-link">Contact</a></li>
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#tools" class="nav-link">Technologies</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#demo" class="nav-link">Demo</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
         <div class="mobile-menu-btn">
-            <i class="fas fa-bars"></i>
+          <i class="fas fa-bars"></i>
         </div>
-    </nav>
-</header>
+      </nav>
+    </header>
 
-<section class="hero" id="home">
-    <div class="container">
+    <section class="hero" id="home">
+      <div class="container">
         <div class="hero-content">
-            <h1>Modern Cloud & DevOps Solutions</h1>
-            <p>Streamline your infrastructure with cutting-edge cloud technologies and DevOps practices to achieve unprecedented efficiency and scalability.</p>
-            <div class="hero-buttons">
-                <button class="cta-button primary" onclick="scrollToSection('services')">Explore Services</button>
-                <button class="cta-button secondary" onclick="scrollToSection('contact')">Get in Touch</button>
-            </div>
+          <h1>Modern Cloud & DevOps Solutions</h1>
+          <p>
+            Streamline your infrastructure with cutting-edge cloud technologies
+            and DevOps practices to achieve unprecedented efficiency and
+            scalability.
+          </p>
+          <div class="hero-buttons">
+            <button
+              class="cta-button primary"
+              onclick="scrollToSection('services')"
+            >
+              Explore Services
+            </button>
+            <button
+              class="cta-button secondary"
+              onclick="scrollToSection('contact')"
+            >
+              Get in Touch
+            </button>
+          </div>
         </div>
         <div class="hero-image">
-            <img src="./img/cloud.png"
-                 alt="3D Cloud Computing Concept"
-                 width="600"
-                 style="border-radius: 8px; background: #131a24; padding: 10px;">
+          <img
+            src="./img/cloud.png"
+            alt="3D Cloud Computing Concept"
+            width="600"
+            style="border-radius: 8px; background: #131a24; padding: 10px"
+          />
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-<main class="main-content">
-    <div class="container">
+    <main class="main-content">
+      <div class="container">
         <section class="section" id="services">
-            <div class="section-header">
-                <span class="section-subtitle">WHAT WE OFFER</span>
-                <h2>Our Services</h2>
-                <p class="section-description">Comprehensive solutions tailored to your cloud and DevOps needs</p>
+          <div class="section-header">
+            <span class="section-subtitle">WHAT WE OFFER</span>
+            <h2>Our Services</h2>
+            <p class="section-description">
+              Comprehensive solutions tailored to your cloud and DevOps needs
+            </p>
+          </div>
+          <div class="services-grid">
+            <div class="service-card" onclick="showServiceDetails('cloud')">
+              <div class="service-icon">
+                <i class="fas fa-cloud-upload-alt"></i>
+              </div>
+              <h3>Cloud Migration</h3>
+              <p>
+                Seamlessly migrate your applications to AWS, Azure, or Google
+                Cloud Platform with zero downtime and optimized performance.
+              </p>
+              <div class="service-features">
+                <span><i class="fas fa-check-circle"></i> Assessment</span>
+                <span><i class="fas fa-check-circle"></i> Planning</span>
+                <span><i class="fas fa-check-circle"></i> Execution</span>
+              </div>
             </div>
-            <div class="services-grid">
-                <div class="service-card" onclick="showServiceDetails('cloud')">
-                    <div class="service-icon">
-                        <i class="fas fa-cloud-upload-alt"></i>
-                    </div>
-                    <h3>Cloud Migration</h3>
-                    <p>Seamlessly migrate your applications to AWS, Azure, or Google Cloud Platform with zero downtime and optimized performance.</p>
-                    <div class="service-features">
-                        <span><i class="fas fa-check-circle"></i> Assessment</span>
-                        <span><i class="fas fa-check-circle"></i> Planning</span>
-                        <span><i class="fas fa-check-circle"></i> Execution</span>
-                    </div>
-                </div>
-                <div class="service-card" onclick="showServiceDetails('devops')">
-                    <div class="service-icon">
-                        <i class="fas fa-robot"></i>
-                    </div>
-                    <h3>DevOps Automation</h3>
-                    <p>Implement CI/CD pipelines, infrastructure as code, and automated testing to accelerate your development lifecycle.</p>
-                    <div class="service-features">
-                        <span><i class="fas fa-check-circle"></i> CI/CD Pipelines</span>
-                        <span><i class="fas fa-check-circle"></i> IaC</span>
-                        <span><i class="fas fa-check-circle"></i> Testing</span>
-                    </div>
-                </div>
-                <div class="service-card" onclick="showServiceDetails('monitoring')">
-                    <div class="service-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3>Monitoring & Observability</h3>
-                    <p>Comprehensive monitoring solutions with real-time alerts, dashboards, and performance optimization.</p>
-                    <div class="service-features">
-                        <span><i class="fas fa-check-circle"></i> Real-time Alerts</span>
-                        <span><i class="fas fa-check-circle"></i> Dashboards</span>
-                        <span><i class="fas fa-check-circle"></i> Optimization</span>
-                    </div>
-                </div>
-                <div class="service-card" onclick="showServiceDetails('security')">
-                    <div class="service-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h3>Security & Compliance</h3>
-                    <p>Implement security best practices, compliance frameworks, and automated security scanning.</p>
-                    <div class="service-features">
-                        <span><i class="fas fa-check-circle"></i> Best Practices</span>
-                        <span><i class="fas fa-check-circle"></i> Compliance</span>
-                        <span><i class="fas fa-check-circle"></i> Scanning</span>
-                    </div>
-                </div>
-                <div class="service-card" onclick="showServiceDetails('consulting')">
-                    <div class="service-icon">
-                        <i class="fas fa-headset"></i>
-                    </div>
-                    <h3>Cloud Consulting</h3>
-                    <p>Expert guidance on cloud strategy, architecture design, and cost optimization for your business.</p>
-                    <div class="service-features">
-                        <span><i class="fas fa-check-circle"></i> Strategy</span>
-                        <span><i class="fas fa-check-circle"></i> Architecture</span>
-                        <span><i class="fas fa-check-circle"></i> Optimization</span>
-                    </div>
-                </div>
-                <div class="service-card" onclick="showServiceDetails('training')">
-                    <div class="service-icon">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <h3>Training & Enablement</h3>
-                    <p>Customized training programs to upskill your team in cloud technologies and DevOps practices.</p>
-                    <div class="service-features">
-                        <span><i class="fas fa-check-circle"></i> Workshops</span>
-                        <span><i class="fas fa-check-circle"></i> Certifications</span>
-                        <span><i class="fas fa-check-circle"></i> Hands-on Labs</span>
-                    </div>
-                </div>
+            <div class="service-card" onclick="showServiceDetails('devops')">
+              <div class="service-icon">
+                <i class="fas fa-robot"></i>
+              </div>
+              <h3>DevOps Automation</h3>
+              <p>
+                Implement CI/CD pipelines, infrastructure as code, and automated
+                testing to accelerate your development lifecycle.
+              </p>
+              <div class="service-features">
+                <span><i class="fas fa-check-circle"></i> CI/CD Pipelines</span>
+                <span><i class="fas fa-check-circle"></i> IaC</span>
+                <span><i class="fas fa-check-circle"></i> Testing</span>
+              </div>
             </div>
+            <div
+              class="service-card"
+              onclick="showServiceDetails('monitoring')"
+            >
+              <div class="service-icon">
+                <i class="fas fa-chart-line"></i>
+              </div>
+              <h3>Monitoring & Observability</h3>
+              <p>
+                Comprehensive monitoring solutions with real-time alerts,
+                dashboards, and performance optimization.
+              </p>
+              <div class="service-features">
+                <span
+                  ><i class="fas fa-check-circle"></i> Real-time Alerts</span
+                >
+                <span><i class="fas fa-check-circle"></i> Dashboards</span>
+                <span><i class="fas fa-check-circle"></i> Optimization</span>
+              </div>
+            </div>
+            <div class="service-card" onclick="showServiceDetails('security')">
+              <div class="service-icon">
+                <i class="fas fa-shield-alt"></i>
+              </div>
+              <h3>Security & Compliance</h3>
+              <p>
+                Implement security best practices, compliance frameworks, and
+                automated security scanning.
+              </p>
+              <div class="service-features">
+                <span><i class="fas fa-check-circle"></i> Best Practices</span>
+                <span><i class="fas fa-check-circle"></i> Compliance</span>
+                <span><i class="fas fa-check-circle"></i> Scanning</span>
+              </div>
+            </div>
+            <div
+              class="service-card"
+              onclick="showServiceDetails('consulting')"
+            >
+              <div class="service-icon">
+                <i class="fas fa-headset"></i>
+              </div>
+              <h3>Cloud Consulting</h3>
+              <p>
+                Expert guidance on cloud strategy, architecture design, and cost
+                optimization for your business.
+              </p>
+              <div class="service-features">
+                <span><i class="fas fa-check-circle"></i> Strategy</span>
+                <span><i class="fas fa-check-circle"></i> Architecture</span>
+                <span><i class="fas fa-check-circle"></i> Optimization</span>
+              </div>
+            </div>
+            <div class="service-card" onclick="showServiceDetails('training')">
+              <div class="service-icon">
+                <i class="fas fa-graduation-cap"></i>
+              </div>
+              <h3>Training & Enablement</h3>
+              <p>
+                Customized training programs to upskill your team in cloud
+                technologies and DevOps practices.
+              </p>
+              <div class="service-features">
+                <span><i class="fas fa-check-circle"></i> Workshops</span>
+                <span><i class="fas fa-check-circle"></i> Certifications</span>
+                <span><i class="fas fa-check-circle"></i> Hands-on Labs</span>
+              </div>
+            </div>
+          </div>
         </section>
 
         <section class="section" id="tools">
-            <div class="section-header">
-                <span class="section-subtitle">OUR TECH STACK</span>
-                <h2>Technologies & Tools</h2>
-                <p class="section-description">We work with industry-leading technologies to deliver exceptional results</p>
+          <div class="section-header">
+            <span class="section-subtitle">OUR TECH STACK</span>
+            <h2>Technologies & Tools</h2>
+            <p class="section-description">
+              We work with industry-leading technologies to deliver exceptional
+              results
+            </p>
+          </div>
+          <div class="tools-container">
+            <div class="tool-item">
+              <div class="tool-icon">
+                <i class="fab fa-aws"></i>
+              </div>
+              <h4>AWS</h4>
+              <p>EC2, S3, Lambda, RDS, EKS</p>
             </div>
-            <div class="tools-container">
-                <div class="tool-item">
-                    <div class="tool-icon">
-                        <i class="fab fa-aws"></i>
-                    </div>
-                    <h4>AWS</h4>
-                    <p>EC2, S3, Lambda, RDS, EKS</p>
-                </div>
-                <div class="tool-item">
-                    <div class="tool-icon">
-                        <i class="fab fa-google"></i>
-                    </div>
-                    <h4>Google Cloud</h4>
-                    <p>Compute Engine, GKE, Cloud Functions</p>
-                </div>
-                <div class="tool-item">
-                    <div class="tool-icon">
-                        <i class="fab fa-microsoft"></i>
-                    </div>
-                    <h4>Azure</h4>
-                    <p>VMs, AKS, Functions, SQL</p>
-                </div>
-                <div class="tool-item">
-                    <div class="tool-icon">
-                        <i class="fab fa-docker"></i>
-                    </div>
-                    <h4>Docker</h4>
-                    <p>Containerization</p>
-                </div>
-                <div class="tool-item">
-                    <div class="tool-icon">
-                        <i class="fas fa-cubes"></i>
-                    </div>
-                    <h4>Kubernetes</h4>
-                    <p>Container Orchestration</p>
-                </div>
-                <div class="tool-item">
-                    <div class="tool-icon">
-                        <i class="fas fa-code-branch"></i>
-                    </div>
-                    <h4>Terraform</h4>
-                    <p>Infrastructure as Code</p>
-                </div>
-                <div class="tool-item">
-                    <div class="tool-icon">
-                        <i class="fab fa-jenkins"></i>
-                    </div>
-                    <h4>Jenkins</h4>
-                    <p>CI/CD Pipeline</p>
-                </div>
-                <div class="tool-item">
-                    <div class="tool-icon">
-                        <i class="fas fa-bolt"></i>
-                    </div>
-                    <h4>Ansible</h4>
-                    <p>Configuration Management</p>
-                </div>
-                <div class="tool-item">
-                    <div class="tool-icon">
-                        <i class="fas fa-chart-bar"></i>
-                    </div>
-                    <h4>Prometheus</h4>
-                    <p>Monitoring & Alerting</p>
-                </div>
-                <div class="tool-item">
-                    <div class="tool-icon">
-                        <i class="fab fa-git-alt"></i>
-                    </div>
-                    <h4>Git</h4>
-                    <p>Version Control</p>
-                </div>
-                <div class="tool-item">
-                    <div class="tool-icon">
-                        <i class="fas fa-server"></i>
-                    </div>
-                    <h4>Helm</h4>
-                    <p>Kubernetes Package Manager</p>
-                </div>
-                <div class="tool-item">
-                    <div class="tool-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h4>Vault</h4>
-                    <p>Secrets Management</p>
-                </div>
+            <div class="tool-item">
+              <div class="tool-icon">
+                <i class="fab fa-google"></i>
+              </div>
+              <h4>Google Cloud</h4>
+              <p>Compute Engine, GKE, Cloud Functions</p>
             </div>
+            <div class="tool-item">
+              <div class="tool-icon">
+                <i class="fab fa-microsoft"></i>
+              </div>
+              <h4>Azure</h4>
+              <p>VMs, AKS, Functions, SQL</p>
+            </div>
+            <div class="tool-item">
+              <div class="tool-icon">
+                <i class="fab fa-docker"></i>
+              </div>
+              <h4>Docker</h4>
+              <p>Containerization</p>
+            </div>
+            <div class="tool-item">
+              <div class="tool-icon">
+                <i class="fas fa-cubes"></i>
+              </div>
+              <h4>Kubernetes</h4>
+              <p>Container Orchestration</p>
+            </div>
+            <div class="tool-item">
+              <div class="tool-icon">
+                <i class="fas fa-code-branch"></i>
+              </div>
+              <h4>Terraform</h4>
+              <p>Infrastructure as Code</p>
+            </div>
+            <div class="tool-item">
+              <div class="tool-icon">
+                <i class="fab fa-jenkins"></i>
+              </div>
+              <h4>Jenkins</h4>
+              <p>CI/CD Pipeline</p>
+            </div>
+            <div class="tool-item">
+              <div class="tool-icon">
+                <i class="fas fa-bolt"></i>
+              </div>
+              <h4>Ansible</h4>
+              <p>Configuration Management</p>
+            </div>
+            <div class="tool-item">
+              <div class="tool-icon">
+                <i class="fas fa-chart-bar"></i>
+              </div>
+              <h4>Prometheus</h4>
+              <p>Monitoring & Alerting</p>
+            </div>
+            <div class="tool-item">
+              <div class="tool-icon">
+                <i class="fab fa-git-alt"></i>
+              </div>
+              <h4>Git</h4>
+              <p>Version Control</p>
+            </div>
+            <div class="tool-item">
+              <div class="tool-icon">
+                <i class="fas fa-server"></i>
+              </div>
+              <h4>Helm</h4>
+              <p>Kubernetes Package Manager</p>
+            </div>
+            <div class="tool-item">
+              <div class="tool-icon">
+                <i class="fas fa-shield-alt"></i>
+              </div>
+              <h4>Vault</h4>
+              <p>Secrets Management</p>
+            </div>
+          </div>
         </section>
 
         <section class="stats" id="about">
-            <div class="container">
-                <div class="stats-content">
-                    <div class="stats-text">
-                        <span class="section-subtitle">WHY CHOOSE US</span>
-                        <h2>Trusted by industry leaders worldwide</h2>
-                        <p>Our proven track record speaks for itself. We've helped organizations of all sizes transform their operations with cloud-native solutions.</p>
-                        <button class="cta-button primary" onclick="scrollToSection('contact')">Get Started</button>
-                    </div>
-                    <div class="stats-grid">
-                        <div class="stat-item">
-                            <h3 id="projectCount">0</h3>
-                            <p>Projects Completed</p>
-                        </div>
-                        <div class="stat-item">
-                            <h3 id="uptimeCount">0</h3>
-                            <p>% Uptime Achieved</p>
-                        </div>
-                        <div class="stat-item">
-                            <h3 id="clientCount">0</h3>
-                            <p>Happy Clients</p>
-                        </div>
-                        <div class="stat-item">
-                            <h3 id="deploymentCount">0</h3>
-                            <p>Daily Deployments</p>
-                        </div>
-                    </div>
+          <div class="container">
+            <div class="stats-content">
+              <div class="stats-text">
+                <span class="section-subtitle">WHY CHOOSE US</span>
+                <h2>Trusted by industry leaders worldwide</h2>
+                <p>
+                  Our proven track record speaks for itself. We've helped
+                  organizations of all sizes transform their operations with
+                  cloud-native solutions.
+                </p>
+                <button
+                  class="cta-button primary"
+                  onclick="scrollToSection('contact')"
+                >
+                  Get Started
+                </button>
+              </div>
+              <div class="stats-grid">
+                <div class="stat-item">
+                  <h3 id="projectCount">0</h3>
+                  <p>Projects Completed</p>
                 </div>
+                <div class="stat-item">
+                  <h3 id="uptimeCount">0</h3>
+                  <p>% Uptime Achieved</p>
+                </div>
+                <div class="stat-item">
+                  <h3 id="clientCount">0</h3>
+                  <p>Happy Clients</p>
+                </div>
+                <div class="stat-item">
+                  <h3 id="deploymentCount">0</h3>
+                  <p>Daily Deployments</p>
+                </div>
+              </div>
             </div>
+          </div>
         </section>
 
         <section class="section" id="demo">
-            <div class="section-header">
-                <span class="section-subtitle">TRY IT OUT</span>
-                <h2>Interactive Demo</h2>
-                <p class="section-description">Experience our DevOps automation platform with this simulated environment</p>
+          <div class="section-header">
+            <span class="section-subtitle">TRY IT OUT</span>
+            <h2>Interactive Demo</h2>
+            <p class="section-description">
+              Experience our DevOps automation platform with this simulated
+              environment
+            </p>
+          </div>
+          <div class="interactive-demo">
+            <div class="demo-header">
+              <h3>DevOps Command Simulator</h3>
+              <div class="demo-tabs">
+                <button class="demo-tab active">Terminal</button>
+                <button class="demo-tab">Pipeline</button>
+                <button class="demo-tab">Monitoring</button>
+              </div>
             </div>
-            <div class="interactive-demo">
-                <div class="demo-header">
-                    <h3>DevOps Command Simulator</h3>
-                    <div class="demo-tabs">
-                        <button class="demo-tab active">Terminal</button>
-                        <button class="demo-tab">Pipeline</button>
-                        <button class="demo-tab">Monitoring</button>
-                    </div>
-                </div>
-                <div class="demo-controls">
-                    <button class="demo-btn" onclick="runCommand('deploy')">
-                        <i class="fas fa-rocket"></i> Deploy
-                    </button>
-                    <button class="demo-btn" onclick="runCommand('scale')">
-                        <i class="fas fa-expand"></i> Scale
-                    </button>
-                    <button class="demo-btn" onclick="runCommand('monitor')">
-                        <i class="fas fa-heartbeat"></i> Health Check
-                    </button>
-                    <button class="demo-btn" onclick="runCommand('rollback')">
-                        <i class="fas fa-undo"></i> Rollback
-                    </button>
-                    <button class="demo-btn warning" onclick="clearOutput()">
-                        <i class="fas fa-trash"></i> Clear
-                    </button>
-                </div>
-                <div class="demo-output" id="demoOutput">
-                    <div class="output-header">
-                        <span class="output-prompt">user@cloudops:~$</span>
-                        <span class="output-status">Connected to CloudOps Hub Demo Environment</span>
-                    </div>
-                    <div class="output-content">
-                        Welcome to CloudOps Hub Demo Terminal
-                        Type commands above to simulate DevOps operations...
-                    </div>
-                </div>
+            <div class="demo-controls">
+              <button class="demo-btn" onclick="runCommand('deploy')">
+                <i class="fas fa-rocket"></i> Deploy
+              </button>
+              <button class="demo-btn" onclick="runCommand('scale')">
+                <i class="fas fa-expand"></i> Scale
+              </button>
+              <button class="demo-btn" onclick="runCommand('monitor')">
+                <i class="fas fa-heartbeat"></i> Health Check
+              </button>
+              <button class="demo-btn" onclick="runCommand('rollback')">
+                <i class="fas fa-undo"></i> Rollback
+              </button>
+              <button class="demo-btn warning" onclick="clearOutput()">
+                <i class="fas fa-trash"></i> Clear
+              </button>
             </div>
+            <div class="demo-output" id="demoOutput">
+              <div class="output-header">
+                <span class="output-prompt">user@cloudops:~$</span>
+                <span class="output-status"
+                  >Connected to CloudOps Hub Demo Environment</span
+                >
+              </div>
+              <div class="output-content">
+                Welcome to CloudOps Hub Demo Terminal Type commands above to
+                simulate DevOps operations...
+              </div>
+            </div>
+          </div>
         </section>
 
         <section class="section" id="contact">
-            <div class="section-header">
-                <span class="section-subtitle">GET IN TOUCH</span>
-                <h2>Contact Us</h2>
-                <p class="section-description">Ready to transform your cloud infrastructure? Let's talk.</p>
-            </div>
-            <div class="contact-container">
-                <div class="contact-info">
-                    <div class="info-item">
-                        <div class="info-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="info-content">
-                            <h4>Email</h4>
-                            <p>info@cloudopshub.com</p>
-                        </div>
-                    </div>
-                    <div class="info-item">
-                        <div class="info-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <div class="info-content">
-                            <h4>Phone</h4>
-                            <p>+1 (555) 123-4567</p>
-                        </div>
-                    </div>
-                    <div class="info-item">
-                        <div class="info-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="info-content">
-                            <h4>Location</h4>
-                            <p>San Francisco, CA</p>
-                        </div>
-                    </div>
+          <div class="section-header">
+            <span class="section-subtitle">GET IN TOUCH</span>
+            <h2>Contact Us</h2>
+            <p class="section-description">
+              Ready to transform your cloud infrastructure? Let's talk.
+            </p>
+          </div>
+          <div class="contact-container">
+            <div class="contact-info">
+              <div class="info-item">
+                <div class="info-icon">
+                  <i class="fas fa-envelope"></i>
                 </div>
-                <form class="contact-form">
-                    <div class="form-group">
-                        <input type="text" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" placeholder="Your Email" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" placeholder="Subject">
-                    </div>
-                    <div class="form-group">
-                        <textarea placeholder="Your Message" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="cta-button primary">Send Message</button>
-                </form>
+                <div class="info-content">
+                  <h4>Email</h4>
+                  <p>info@cloudopshub.com</p>
+                </div>
+              </div>
+              <div class="info-item">
+                <div class="info-icon">
+                  <i class="fas fa-phone"></i>
+                </div>
+                <div class="info-content">
+                  <h4>Phone</h4>
+                  <p>+1 (555) 123-4567</p>
+                </div>
+              </div>
+              <div class="info-item">
+                <div class="info-icon">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="info-content">
+                  <h4>Location</h4>
+                  <p>San Francisco, CA</p>
+                </div>
+              </div>
             </div>
+            <form class="contact-form">
+              <div class="form-group">
+                <input type="text" placeholder="Your Name" required />
+              </div>
+              <div class="form-group">
+                <input type="email" placeholder="Your Email" required />
+              </div>
+              <div class="form-group">
+                <input type="text" placeholder="Subject" />
+              </div>
+              <div class="form-group">
+                <textarea
+                  placeholder="Your Message"
+                  rows="5"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="cta-button primary">
+                Send Message
+              </button>
+            </form>
+          </div>
         </section>
-    </div>
-</main>
+      </div>
+    </main>
 
-<footer>
-    <div class="container">
+    <footer>
+      <div class="container">
         <div class="footer-content">
-            <div class="footer-about">
-                <div class="logo">
-                    <i class="fas fa-cloud"></i>
-                    <span>CloudOps Hub</span>
-                </div>
-                <p>Modern cloud and DevOps solutions for the digital transformation era.</p>
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                    <a href="#"><i class="fab fa-github"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
-                </div>
+          <div class="footer-about">
+            <div class="logo">
+              <i class="fas fa-cloud"></i>
+              <span>CloudOps Hub</span>
             </div>
-            <div class="footer-links">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#tools">Technologies</a></li>
-                    <li><a href="#demo">Demo</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
+            <p>
+              Modern cloud and DevOps solutions for the digital transformation
+              era.
+            </p>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+              <a href="#"><i class="fab fa-github"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
             </div>
-            <div class="footer-links">
-                <h4>Services</h4>
-                <ul>
-                    <li><a href="#">Cloud Migration</a></li>
-                    <li><a href="#">DevOps Automation</a></li>
-                    <li><a href="#">Monitoring</a></li>
-                    <li><a href="#">Security</a></li>
-                    <li><a href="#">Consulting</a></li>
-                </ul>
-            </div>
-            <div class="footer-newsletter">
-                <h4>Newsletter</h4>
-                <p>Subscribe to our newsletter for the latest updates.</p>
-                <form class="newsletter-form">
-                    <input type="email" placeholder="Your Email" required>
-                    <button type="submit"><i class="fas fa-paper-plane"></i></button>
-                </form>
-            </div>
+          </div>
+          <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#tools">Technologies</a></li>
+              <li><a href="#demo">Demo</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-links">
+            <h4>Services</h4>
+            <ul>
+              <li><a href="#">Cloud Migration</a></li>
+              <li><a href="#">DevOps Automation</a></li>
+              <li><a href="#">Monitoring</a></li>
+              <li><a href="#">Security</a></li>
+              <li><a href="#">Consulting</a></li>
+            </ul>
+          </div>
+          <div class="footer-newsletter">
+            <h4>Newsletter</h4>
+            <p>Subscribe to our newsletter for the latest updates.</p>
+            <form class="newsletter-form">
+              <input type="email" placeholder="Your Email" required />
+              <button type="submit"><i class="fas fa-paper-plane"></i></button>
+            </form>
+          </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 CloudOps Hub. All rights reserved. Built for S3 Static Website Hosting Demo.</p>
-            <div class="legal-links">
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms of Service</a>
-                <a href="#">Cookie Policy</a>
-            </div>
+          <p>
+            &copy; 2024 CloudOps Hub. All rights reserved. Built for S3 Static
+            Website Hosting Demo.
+          </p>
+          <div class="legal-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Cookie Policy</a>
+          </div>
         </div>
-    </div>
-</footer>
+      </div>
+    </footer>
 
-<script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
