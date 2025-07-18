@@ -32,8 +32,8 @@ body {
 
 .container {
   max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+  margin: 10px auto;
+  padding: 5px 20px;
 }
 
 /* Special container for header to avoid margin issues */
