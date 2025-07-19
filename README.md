@@ -6,16 +6,14 @@ Every time you push to the main branch, the site is automatically deployed to yo
 
 How It Works
 GitHub Actions Workflow Steps:
-1️⃣ Trigger on Push
 
+1️⃣ Trigger on Push
 The workflow triggers only on pushes to the main branch.
 
 2️⃣ Checkout Repository
-
 Uses actions/checkout@v2 to pull your latest code.
 
 3️⃣ Configure AWS Credentials
-
 Uses aws-actions/configure-aws-credentials@v2
 
 Credentials are securely stored in GitHub Secrets:
@@ -25,7 +23,6 @@ AWS_ACCESS_KEY_ID
 AWS_SECRET_ACCESS_KEY
 
 AWS Region: us-east-1
-
 4️⃣ Sync to S3
 
 Runs:
