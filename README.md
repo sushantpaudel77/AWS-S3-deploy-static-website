@@ -24,10 +24,6 @@ AWS_SECRET_ACCESS_KEY
 Region: us-east-1
 
 4️⃣ Sync to S3
-
-bash
-Copy
-Edit
 aws s3 sync ./public/ s3://july16sushantpaudelbucket --delete
 Uploads everything in ./public/ to your S3 bucket
 
